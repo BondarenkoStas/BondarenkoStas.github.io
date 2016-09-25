@@ -1,0 +1,236 @@
+@font-face {
+    font-family: 'Helvetica Neue Regular';
+    src: url('../fonts/helveticaneuecyr-roman-webfont.woff2') format('woff2'),
+         url('../fonts/helveticaneuecyr-roman-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+	padding: 0px;
+	margin: 0px;
+	font-family: "Helvetica Neue Regular";
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	background: url(../img/bg.jpg) top no-repeat;
+	background-size: cover;
+}
+header {
+	height: 36px;
+	background: url(../img/header.jpg) repeat-x;
+}
+header ul {
+	float: right;
+}
+header li {
+	display: inline-block;
+	line-height: 36px;
+	font-size: 13px;
+}
+
+/*--------------------MENU 1--------------------*/
+
+.menu_h_1:after {
+	display: inline-block;
+	content: '';
+	width: 1px;
+	height: 31px;
+	margin: 0px 0px 4px 8px;
+	vertical-align: middle;
+	background: #56a2dc;
+}
+.menu_h_1 li {
+	padding: 0px 12px 0px 12px;
+}
+.menu_h_1:first-child {
+	padding-right: 5px;
+}
+.menu_h_1 li a {
+	color: #5cb0e8;
+}
+.menu_h_1 li:hover {
+	transition: 0.3s;
+	background: #449ad3;
+}
+.menu_h_1 li:hover a {
+	transition: 0.3s;
+	font-weight: bold;
+	color: white;
+}
+
+/*--------------------MENU 1--------------------*/
+
+.menu_h_2:before {
+	display: inline-block;
+	width: 25px;
+	height: 30px;
+	margin-left: 19px;
+	content: '';
+	vertical-align: middle;
+	margin-top: 5px;
+	background: url(../img/flag.png) no-repeat;
+}
+.menu_h_2 li a, .menu_h_2 li {
+	color: #fefefe;
+}
+.menu_h_2 .active {	
+	box-sizing: border-box;
+	padding: 1px;
+	background: linear-gradient(to top, #4299d2, #65a8e4);
+}
+.menu_h_2 .active .li_in {
+	height: 34px;
+	background: linear-gradient(to top, #2e7ac4, #50afdc);
+}
+.menu_h_2 .Ola a {
+	text-decoration: underline;
+}
+.menu_h_2 li {
+	margin-right: 20px;
+}
+.menu_h_2 li .li_in {
+	word-spacing: 3px;
+	padding-right: 12px;
+	padding-left: 13px;
+}
+.menu_h_2 .manhas {
+	margin: 0px 0px 0px -5px;
+	padding-left: 0px;
+}
+
+/*---------------------MAIN--------------------*/
+
+main {
+	height: 1030px;
+	padding-top: 214px;
+}
+main>div {
+	width: 560px;
+	background-color: rgba(0,0,0,0.63);
+	margin: 0 auto;
+}
+.center {
+	box-sizing: border-box;
+	padding: 36px 0px 0px 142px;
+}
+.head {
+	margin-bottom: 2px;
+}
+.head p {
+	font-size: 24px;
+	color: white;
+	line-height: 60px;
+	text-align: center;
+}
+.fb div {
+	vertical-align: middle;
+	display: inline-block;
+	background: linear-gradient(to top, #304274, #3d5698);
+	border-top: 1px solid #7789bb;
+	margin-bottom: 15px;
+	color: white;
+	font-size: 16px;
+	line-height: 32px;
+}
+.fb_1 {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-right: 1px solid #213c71;
+	padding: 0px 15px;
+	margin-right: -4px;
+}
+.fb_1 b {	
+	font-size: 26px;	
+}
+.fb_2 {
+	height: 35px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-left: 1px solid #4c68a9;
+	padding-left: 31px;
+}
+.fb_2 a {
+	color: white;
+}
+.fb_2 img {
+	padding: 0px 26px 0px 14px;
+}
+.ou {
+	color: #999;
+}
+.ou:before, .ou:after {
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  width: 123px;
+  margin: 22px 3px;
+  border-top: 1px solid #666666;
+  border-bottom: 1px solid #000;
+}
+
+/*--------------------FORM-----------------------*/
+form {
+	color: #ccc;
+}
+input[type=text]
+, input[type=email]
+, input[type=password] {
+	box-sizing: border-box;
+	background: #100f0f;
+	color: white;
+	display: block;
+	width: 275px;
+	line-height: 35px;
+	border: none;
+	border-bottom: 1px solid #484948;
+	padding-left: 17px;
+	margin: 15px 0px;
+}
+input:focus {
+	transition: 0.5s;
+	background: #1b5288;
+	color: white;
+  box-shadow: 0px 0px 11px 3px #699bcd
+  	,inset 0px 5px 14px -9px black;
+}
+.l_send, .c_send {
+	cursor: pointer;
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.wr_submit {
+	border-radius: 3px;
+	box-sizing: border-box;
+	height: 35px;
+	width: 152px;
+	background: linear-gradient(to top, #3686ca, #67c6e6);
+	padding: 2px 1px 1px;
+	margin: 28px 0px 0px 62px;
+}
+.submit {
+	cursor: pointer;
+	background: linear-gradient(to top, #2e7ac4, #50aedb);
+	border:none;
+	color: white;
+	height: 32px;
+	width: 150px;
+}
+.under {
+	height: 65px;
+	color: #ccc;
+	padding-top: 20px;
+	font-size: 11px;
+	text-align: center;
+}
+.under p {
+	margin: 0 auto;
+	width: 312px;
+}

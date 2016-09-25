@@ -1,0 +1,104 @@
+.slider__h:hover
+, .article__header:hover
+, .read-more:hover
+, .blog__h2:hover
+, .read-more--blog:hover {
+	text-decoration: underline;
+}
+.nav__item {
+	padding-right: 3%;
+}
+.wrapper-head {
+	filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/header.jpg', sizingMethod='scale')";
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/header.jpg', sizingMethod='scale')";
+	border-bottom: 1px solid rgb(51,37,58);
+}
+.wrapper-slider {
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4c000000', endColorstr='#4c000000');
+}
+.slider__button {
+	background: url(../img/slider__button.png);
+}
+.slider__button:hover:after {
+	background: url('../img/slider__button__hover.png') no-repeat;	
+	width: 16px;
+	height: 16px;
+}
+.slider__button--active:after
+, .slider__button:active:after {
+	background: url('../img/slider__button__active.png') no-repeat;	
+	width: 16px;
+	height: 16px;
+}
+.testimonial__button {
+	background: url('../img/testimonial__button.png') no-repeat;
+	border: none;
+	width: 20px;
+	height: 20px;
+}
+.testimonial__button:hover:after {
+	background: url('../img/slider__button__hover.png') no-repeat;	
+	width: 16px;
+	height: 16px;
+	left: 4px;
+	top: 4px;
+}
+.testimonial__button--active:after
+, .testimonial__button:active:after {
+	border: none;
+	background: url('../img/testimonial__button__active.png') no-repeat;	
+	width: 16px;
+	height: 16px;
+	left: 4px;
+	top: 4px;
+}
+.testimonial {
+	width: 42%;
+}
+.blurbs-wrapper {	
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#745083, endColorstr=#322539)"; 
+}
+.main {
+	padding-bottom: 0px;
+}
+.footer-nav-wrapper {
+	height: 110px;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/footer.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/footer.jpg', sizingMethod='scale')";
+	background: url(../img/footer.jpg) top no-repeat;
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+	.logo {
+		display: block;
+	}
+	.nav__item {
+		line-height: 30px;
+	}
+	.footer__designed {
+		line-height: 10px;
+	}
+
+}
+@media (min-width: 480px) and (max-width: 767px) {
+	.nav {
+		background: rgb(54,41,62);
+		opacity: 0.8;
+	}
+	.nav__item {
+		border-bottom: 1px solid #695272;
+	}
+	.nav__item--footer {
+		border-bottom: 0;
+		margin-right: 1%;
+	}
+}
+@media (max-width: 479px) {
+	.nav {
+		background: rgb(54,41,62);
+		opacity: 0.8;
+	}
+	.nav__item {
+		border-bottom: 1px solid #695272;
+	}
+}

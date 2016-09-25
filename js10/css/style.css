@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.body {
+	background: #eee;
+	padding-bottom: 10%;
+}
+ul {
+	list-style: none;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+
+/*------------------MENU--------------------*/
+.desk__menu {
+	line-height: 50px;
+	position: absolute;
+	right: 5%;
+}
+
+.triangle {
+	border: 5px solid white;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	content: '';
+	position: relative;
+	top: 15px;
+	left: 10px;
+}
+.triangle--right {
+	border-left-color: white;
+	border-top-color: transparent;
+	float: right;
+	margin-top: 5px;
+
+}
+
+.nav {
+	box-sizing: border-box;
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	padding-left: 10%;
+	width: 100%;
+	background: #ff6464;
+	color: #fff;
+	font-family: Verdana;
+}
+.nav>li {
+	padding-left:10px;
+	vertical-align: top;
+	display: inline-block;
+	height: 50px;
+	width: 100px;
+	line-height: 50px;
+	position: relative;
+	cursor: pointer;
+	margin:0;
+}
+.nav li:hover>a {
+	color: #333;
+}
+.nav>li ul {
+	visibility: hidden;
+	position: relative;
+	left:-10px;
+	top: -5px;
+	width: 200px;
+}
+.nav>li li {
+	background: #ff6464;
+	position: relative;
+	padding: 0 10px;
+	width: 180px;
+	border-bottom: 1px solid #a33737;
+}
+.nav>li li>ul {
+	position: absolute;
+	width: 200px;
+	left: 200px;
+	top:0;
+}
+
+/*------------------CAROUSEL---------------*/
+
+.jcarousel__wrapper {
+	position: relative;
+	width: 600px;
+	margin: 5% auto;
+  border: 10px solid rgba(0,20,0,.5);
+	box-shadow: 0px -1px 13px 5px rgba(100,120,100,.5);
+	border-radius: 20px;
+	padding: 3%;
+}
+.jcarousel {
+  position: relative;
+  overflow: hidden;
+  width: 600px;
+}
+.jcarousel ul {
+	list-style: none;
+	overflow: hidden;
+	width: 20000em;
+	position: relative;
+}
+.jcarousel li {
+	border-radius: 10px;
+  float: left;
+	height: 400px;
+}
+.jcarousel img {
+	width: 600px;
+	height: 400px;
+}
+.jcarousel-prev,
+.jcarousel-next {
+	position: absolute;
+	top:50%;
+	display: block;
+	width: 30px;
+	height: 30px;
+  background-color: #778899;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0,0,0,0.8) inset;
+}
+.jcarousel-prev:hover,
+.jcarousel-next:hover {
+    background-color: #456;
+}
+.jcarousel-prev.inactive,
+.jcarousel-next.inactive {
+    background-color: #789;
+    cursor: default;
+}
+.jcarousel-prev{
+    left: -50px;
+}
+.jcarousel-prev:after,
+.jcarousel-next:after {
+	position: absolute;
+	display: block;
+	content: '';
+	top: 5px;
+	left: -2px;
+	border: 10px solid #eee;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	border-top-color: transparent;
+}
+.jcarousel-next:after {
+	border-left-color: #eee;
+	border-right-color: transparent;
+	left: 11px;
+}
+.jcarousel-next{
+    right: -50px;
+}
+.jcarousel-pagination {
+    background-color: transparent;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.jcarousel-pagination a {
+    text-decoration: none;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #778899;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+.jcarousel-pagination a:first-child{
+    margin-left: 0;
+}
+.jcarousel-pagination a:hover{
+    background-color: rgba(0,0,0,0.6);
+}
+.jcarousel-pagination a.active{
+    background-color: rgba(0,0,0,.8);
+    border: 2px solid black;
+}
+
+/*------------------SELECT----------------------*/
+
+.select__wrapper {
+	font-size: 1.2em;
+	margin: 5% auto;
+	width: 40%;	
+}
+
+/*-------------------CHECKBOX---------------------*/
+.checkboxesJS {
+    font-family: sans-serif;
+    padding: 10px;
+    background-color: deepskyblue;
+}
+.checkboxesJS .niceCheck {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    background: url(../img/checkbox-sprite.png);
+    overflow: hidden;
+    margin-left: 5px;
+}
+.checkboxesJS .niceChecked {
+    background-position: 0 -17px;
+}
+.checkboxesJS .niceCheck input {
+    margin-left: -100px;
+}
+
+
+.checkboxesCSS {
+    font-family: sans-serif;
+    padding: 10px;
+    background-color: dodgerblue;
+}
+.checkboxesCSS input[type=checkbox] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+.checkboxesCSS label {
+    cursor: pointer;
+}
+.checkboxesCSS label:after {
+    content: " ";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url(../img/checkbox-sprite.png);
+    position: relative;
+    top: 3px;
+    margin-left: 10px;
+}
+.checkboxesCSS input[type=checkbox]:checked + label:after {
+    background-position: 0 -17px;
+}
