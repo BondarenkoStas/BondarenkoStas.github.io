@@ -31,7 +31,7 @@
 					.append('<span></span>')
 					.find('span').css({'border': 0.6*options.arrowSize+'px solid transparent',
 					  'border-top-color': options.arrowBg,
-					  'transform': 'translate(-'+0.6*options.arrowSize+'px, -'+options.arrowSize+'px)'});
+					  'transform': 'translate(-'+0.6*options.arrowSize+'px, -'+1.1*options.arrowSize+'px)'});
 				$('.carousel__arrow--left').css({'transform':'rotate(90deg) translate(0px, '+0.5*options.arrowSize+'px)'});
 				$('.carousel__arrow--right').css({'transform':'rotate(270deg) translate(0px, '+0.5*options.arrowSize+'px'});
 				//--------------------------------------------
