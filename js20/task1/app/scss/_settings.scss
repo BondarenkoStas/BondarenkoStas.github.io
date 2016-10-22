@@ -1,0 +1,43 @@
+$yellow:#f4b60d;
+$blue:#248cec;
+$black:#2a2d32;
+$font_color_major:#434343;
+$font_color_minor:#8c8c8c;
+$light_grey_accordeon:#e8e8e8;
+$footer_grey:#35383c;
+
+
+$width_main:1200px;
+$root_font_size:13px;
+$font_main:ubuntu;
+
+.blue{
+	color:$blue;
+}
+
+
+.wrapper--black{		
+	background-color:$black;
+}
+.wrapper--lightgrey{
+	background: #f7f7f7;
+}
+.wrapper--grey{
+	background-color: #35383c;
+}
+
+@font-face {
+	font-family: 'ubuntu';
+	src: url('../fonts/ubuntu-r-webfont.woff2') format('woff2'),
+		url('../fonts/ubuntu-r-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html{
+	font-size:$root_font_size;
+	font-family:$font_main;
+}
+a{
+	text-decoration: none;
+}

@@ -1,0 +1,17 @@
+@mixin font($font,$line){
+	font-size:$font;
+	line-height:$line;
+}
+@mixin middlePage($width){
+	padding-left:38px;
+	padding-right:38px;
+	width:$width;
+	margin:auto;
+}
+
+@mixin resetbtn(){
+	border: 0;
+	background-color:white;
+	outline: 0;
+	cursor: pointer;
+}

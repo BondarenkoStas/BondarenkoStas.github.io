@@ -1,0 +1,51 @@
+.footer {
+	&__wrapper--black {
+		background-color: $black;
+	}
+	&-menu {	
+		@include middlePage($width_main);
+		padding-top:60px;
+		padding-bottom:70px;
+		vertical-align: top;
+		.column {
+			display: inline-block;
+			width: 260px;
+			margin-right:40px;
+			&:last-child{
+				margin-right:0;
+			}
+			&__header{
+				@include font(1.33rem,2rem);
+				color:white;
+				margin-bottom:40px;
+			}
+			&__line{
+				@include font(1.1rem,3rem);
+				display: block;
+				color:$font-color-minor;	
+				border-bottom:1px solid $font-color-minor/2;
+				&:last-child{
+					border-bottom:none;
+				}
+				&:hover{
+					color:$blue;
+				}
+			}
+		}			
+	}
+	.contacts {
+		@include middlePage($width_main);
+		@include font(1rem,5rem);
+		&__item {
+			color:$font-color-minor;
+			margin-right:30px;
+		}
+		&__img {				
+			display: inline-block;
+			margin-right:10px;
+		}
+		&__copy {
+			float: right;
+		}
+	}
+}

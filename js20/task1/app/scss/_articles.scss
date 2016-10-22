@@ -1,0 +1,49 @@
+.articles{
+	&__wrapper{
+		@include middlePage($width_main);
+		margin-bottom: 70px;
+	}
+	width: 33%;
+	display: inline-block;
+	box-sizing:border-box;		
+	&:before{
+		display: inline-block;
+		vertical-align: top;
+		width: 28%;
+		@include font(7.5rem,5.5rem);
+		opacity: 0.1;
+		letter-spacing:-0.75rem;
+	}
+	@for $i from 1 to 4 {
+		&:nth-child(#{$i}):before {
+			content: "0#{$i}";
+		}
+	}
+	&-cont{
+		display: inline-block;
+		width: 71%;
+		&__head {
+			@include font(1.65rem,5rem);
+			color:$font_color_major;			
+		}
+		&__text{
+			font-family:Arial;
+			@include font(1.1rem,1.65rem);
+			height:5rem;
+			overflow:hidden;
+			color:$font_color_minor;
+		}
+		&__readmore{
+			@include font(1.1rem,2.5rem);
+			font-weight:bold;
+			color:$font_color_major;
+			&:hover {
+				color:$blue;
+			}
+			.arrow {	
+				display: inline-block;			
+				margin-left:10px;
+			}
+		}
+	}
+}

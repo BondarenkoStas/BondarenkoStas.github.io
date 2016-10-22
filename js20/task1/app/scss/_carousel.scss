@@ -1,0 +1,84 @@
+.jcarousel {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	&__wrapper{
+		@include middlePage($width_main);
+		margin-top: 40px;
+		margin-bottom: 70px;
+		position: relative;	
+	}
+	ul {
+		overflow: hidden;
+		width: 20000em;
+		position: relative;
+	}
+	li{
+		float:left;
+		height: 465px;
+	}
+	img {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		width:$width_main;
+	}
+	&__pagination {
+	background-color: transparent;
+	position: absolute;
+	bottom: 20px;
+	left: 540px;
+		a {
+			position: relative;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background-color: white;
+			margin-left: 5px;
+			& .point {
+				background: black;
+				width: 14px;
+				height: 14px;
+				position: absolute;
+				top: 3px;
+				left: 3px;
+				display: none;
+			}
+			&:first-child{
+				margin-left: 0;
+			}
+			&:hover{
+				& .point {
+					display: block;
+					opacity: 0.3;
+				}
+			}
+			&.active{
+				& .point {
+					display: block;
+				}
+			}
+		}
+	}
+	&__text {
+		position: absolute;
+		bottom: 40px;
+		left: 35px;
+		& p {
+			box-sizing: border-box;
+			padding-left: 25px;
+			width: 215px;
+			color: white;
+			text-transform: uppercase;
+			@include font(4.35rem,4.5rem);
+			background-color: rgb(23,24,26);
+			opacity: 0.9;
+			&.yellow{
+				color:yellow;
+			}
+			&:last-child{
+				width: 305px;
+			}			
+		}
+	}
+}

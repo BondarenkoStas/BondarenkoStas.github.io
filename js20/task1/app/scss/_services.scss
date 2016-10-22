@@ -1,0 +1,55 @@
+	@for $i from 1 to 5 {
+	.services:nth-of-type(#{$i}) .services__photo{
+		background: url(../images/services/img#{$i}.jpg) center center;
+		width: 260px;
+		height: 260px;
+		overflow:hidden;
+	}
+}
+
+@mixin gallery-hover() {
+	div {
+		position: relative;
+	}
+	div:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: "+";
+		font-size: 35px;
+		text-align: center;
+		padding: 112px 0;
+		color: white;
+		width: 260px;
+		height: 260px;
+		background: $blue;
+		opacity: 0.9;
+	}
+	figcaption {
+		color: $yellow;
+	}
+}
+
+.services{
+	&__wrapper{
+		@include middlePage($width_main);
+		padding-bottom:60px;	
+	}
+	&__header{
+		@include font(2rem,9.5rem);
+		color:white;
+	}
+	display: inline-block;
+	width: $width_main/4-5;
+
+	&__text {
+		color: white;
+		@include font(1.3rem,1.65rem);
+		text-align: center;
+		margin-top:30px;
+	}
+	&:hover {
+		cursor: pointer;
+		@include gallery-hover();
+	}
+}

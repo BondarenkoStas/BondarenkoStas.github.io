@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js16</title>
+	<!--build:css css/style.min.css-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/some_test.css">
+  <!--endbuild-->
+  <!--build:js js/main.min.js -->
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/tmpl.js"></script>
+	<script src="js/script.js"></script>
+  <!-- endbuild -->
+</head>
+<body>
+	<div id="main-page">
+		<div class="logo logo--main-page">
+			<div class="logo__text">
+				<span class="blue">S</span>
+				<span class="red">e</span>
+				<span class="yellow">a</span>
+				<span class="blue">r</span>
+				<span class="green">c</span>
+				<span class="red">h</span>			
+				<div class="logo__subtext">Украина</div>
+			</div>
+		</div>
+		<form class="search-form--main">
+			<input type="text" class="search__field search__field--main" maxlength="2048" title="Поиск">
+			<input type="submit" class="search__submit" value="Поиск в Search">
+		</form>		
+	</div>
+
+	<div id="results">
+		<header class="results__header">
+			<div class="logo logo--results">
+				<span class="blue">S</span>
+				<span class="red">e</span>
+				<span class="yellow">a</span>
+				<span class="blue">r</span>
+				<span class="green">c</span>
+				<span class="red">h</span>				
+			</div>
+			<form action="" class="search-form--results">
+				<input type="text" class="search__field search__field--results" maxlength="2048" title="Поиск">
+				<input type="submit" class="search-icon" value="">		
+			</form>
+			</header>
+		<div class="results__list"></div>
+		<script type="text/template" id="results__template">
+			<ul>
+			<% for(var i = 1; i < items.length; i++) { %>
+				<li class="result__item">
+					<div class="text-block">
+						<a href="<%= items[i].link %>" class="link" target="_blank"><%= items[i].title %></a>
+						<div class="url"><%= items[i].displayLink %></div>
+						<div class="brief"><%= items[i].htmlSnippet %></div>
+					</div>
+				</li>
+			<% }; %>
+			</ul>
+		</script>
+	</div>
+</body>
+</html>

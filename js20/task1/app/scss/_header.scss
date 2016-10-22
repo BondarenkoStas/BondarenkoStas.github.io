@@ -1,0 +1,90 @@
+.header {
+	&__wrapper {
+		display: block;
+		@include middlePage($width_main);		
+	}
+	&-links {
+		float:right;
+		&__item {
+			display: inline-block;
+			margin-left:15px;
+			margin-top:15px;
+			$i:0;
+			@each $icon in fb, tw, rss, linkedin, skype {
+				$i: $i + 1;
+				&:nth-child(#{$i}):hover {
+					@extend .icon-#{$icon}_hover
+				}
+			}
+		}
+	}
+	&-logo {
+		font-family:ubuntu;
+		&__img {
+			display: inline-block;
+			width: 35px;
+			height: 35px;
+			background-image:linear-gradient($yellow,#ffd15b);
+			.icon-settings_logo{
+				margin-left:50%;
+				margin-top: 2px;
+			}
+		}
+		&__text {
+			margin-left:10px;
+			display: inline-block;
+			line-height: 1.5rem;
+		}
+		&__header {
+			font-size: 2.5rem;
+			color: $font_color_major;
+		}
+		&__underheader {
+			text-transform: uppercase;
+			margin-left:2px;
+			font-size: 1rem;
+			color: $font_color_minor;
+			letter-spacing: 0.275rem;
+		}
+	}
+}
+.nav{
+	margin-top:35px;
+	background: #2a2d32;
+	padding-right:12px;
+	&-search {
+		line-height:52px;
+		float: right;
+		position: relative;
+		input {
+			color: white;
+			width: 240px;
+			padding-left:18px;
+			display: inline-block;
+			line-height:2.8rem;
+			background: #35383c;
+			border: 1px solid #181a1d;
+		}
+		&__icon {
+			position: absolute;
+			right: 8px;
+			top: 40%;
+		}
+	}
+	&__link {
+		display: inline-block;
+		text-transform: uppercase;
+		border-right: 1px solid #181a1d;
+		a{
+			display: block;
+			padding: 20px 40px;
+			color: white;
+			&:hover{
+				color: $yellow;
+			}
+		}
+		&:first-child{
+			background: $blue;
+		}
+	}
+}

@@ -5,6 +5,19 @@ $(function(){
 
 	var API_KEY = '3445177-7fc8f5896edca73fa0a64e585';
 
+	 function fade(element) {
+	    var op = 1;  // initial opacity
+	    var timer = setInterval(function () {
+	        if (op <= 0.1){
+	            clearInterval(timer);
+	            element.style.display = 'none';
+	        }
+	        element.style.opacity = op;
+	        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+	        op -= op * 0.1;
+	    }, 50);
+	}
+
 /*------------------SETTINGS---------------------------*/
 
 	var settings = {properties:

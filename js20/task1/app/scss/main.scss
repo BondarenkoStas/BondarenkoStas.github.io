@@ -1,0 +1,23 @@
+@import 'reset';
+@import 'settings';
+@import 'mixins';
+@import 'sprite';
+@import 'accordeon';
+
+@import 'carousel';
+@import 'header';
+@import 'articles';
+@import 'services';
+@import 'news';
+@import 'logos';
+@import 'footer';
+
+body {
+	width: 100%;
+	margin: auto;
+	padding-top: 35px;
+}
+
+
+
+

@@ -1,0 +1,16 @@
+.logo {
+	@include middlePage($width_main);
+	background: white;
+	margin-top: 90px;
+	margin-bottom: 90px;
+	text-align: center;
+	&__item {
+	display: inline-block;
+	width: 143px;
+	height: 65px;
+	margin-right: 4%;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
