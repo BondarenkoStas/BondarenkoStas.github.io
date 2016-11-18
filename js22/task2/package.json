@@ -1,0 +1,24 @@
+{
+  "name": "js20task1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bondarenko Stanislav",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.1",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-useref": "^3.1.2",
+    "gulp-watch": "^4.3.10",
+    "run-sequence": "^1.2.2"
+  }
+}
