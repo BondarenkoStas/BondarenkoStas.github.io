@@ -1,0 +1,88 @@
+.promo{
+	&__bg{
+		background: url('../images/main--big.jpg') top center;
+		background-size:cover;
+		background-color:#ccc;
+		width: 100%;		
+	}
+	&__wrapper{
+		color:white;
+		padding-top:45px;
+		padding-bottom:230px;
+		@include mq($from: desktop){
+			@include middlePage($width-desktop);
+		}
+		@include mq($from: tablet, $until: desktop){
+			@include middlePage($width-promo-tablet);
+		}
+		@include mq($from:mobile, $until: tablet){
+			@include middlePage($width-wrapper-mobile);
+			padding:30px 19px 135px;
+			text-align:center;
+		}
+	}
+	&__links{	
+		@include mq($from: tablet, $until: desktop){
+			margin-right:-15px;
+		}
+		@include mq($from:mobile, $until: tablet){
+			float:none;
+			display: inline-block;
+			margin:0 auto;
+		}
+		float:right;
+		& button {
+			@extend %links-button;
+			@include mq($from:mobile, $until: tablet){
+				font-size:14px;
+			}
+		}
+		& button:hover {
+			border:2px solid white;
+			border-radius:20px;
+		}
+	}
+	&__logo img{
+		@include mq($from:mobile, $until: tablet){
+			margin-top:115px;
+		}	
+	}
+	&__header{
+		font-size:52px;
+		line-height: 60px;
+		font-family:Montserrat;
+		margin-top:150px;
+		margin-bottom:24px;
+		text-transform:uppercase;
+		text-align:center;
+		@include mq($from:mobile, $until: tablet){
+			font-size:30px;
+			margin-top:30px;
+			margin-bottom:8px;
+			line-height:normal;
+		}
+	}
+	&__text{
+		font-family:Roboto;
+		font-size:24px;		
+		@include mq($from:mobile, $until: tablet){
+			font-size:18px;
+		}
+		text-align:center;
+	}
+	&__find{
+		@extend %ellipse-button;
+		cursor: pointer;
+		color:white;
+		margin:auto;
+		margin-top:38px;
+		display:block;
+		background:#ff4e50;
+		padding:11px 24px;
+		width:230px;
+		@include mq($from:mobile, $until: tablet){
+			margin-top:20px;
+			width:100%;
+		}
+	}
+}

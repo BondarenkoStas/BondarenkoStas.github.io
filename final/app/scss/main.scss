@@ -1,0 +1,24 @@
+@import 'reset';
+@import 'mq';
+@import 'settings';
+@import 'mixins';
+@import 'sprite';
+
+@import 'promo';
+@import 'slider';
+@import 'partners';
+@import 'gallery';
+@import 'footer';
+
+.wrapper{
+	margin:0 auto;
+	@include mq($from: desktop){
+		width:$width-desktop;
+	}
+	@include mq($from: tablet, $until: desktop){
+		width:$width-wrapper-tablet;
+	}
+	@include mq($from:mobile, $until: tablet){
+		width:$width-wrapper-mobile;
+	}
+}

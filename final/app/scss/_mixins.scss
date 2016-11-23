@@ -1,0 +1,52 @@
+@mixin font($family,$font,$line){
+	font-family:$family;
+	font-size:$font;
+	line-height:$line;
+}
+
+@mixin middlePage($width){
+	max-width:$width;
+	margin:auto;
+}
+
+
+
+%links-button {
+	@include font(Montserrat,16px,normal);
+	color:white;
+	background-color:transparent;
+	border:2px solid transparent;
+	padding:6px 12px;
+	margin-top:-6px;
+}
+%header {
+	@include font(Montserrat,22px,normal);	
+	text-align: center;
+	color: $dark;
+	margin-top: 94px;
+	margin-bottom:35px;
+	@include mq($from:mobile, $until: tablet){
+		margin-top:36px;
+		margin-bottom:12px;
+	}
+}
+%ellipse-button{
+	cursor: pointer;
+	font-family:Montserrat;
+	color:#ff4e50;
+	background-color: white;
+	cursor:pointer;
+	clear: left;
+	margin: 24px 24px 0 24px;
+	width: 196px;
+	padding:10px 30px;
+	border-radius:22px;
+	border: 2px solid #ff4e50;
+	&:hover{
+		background-color: #ff4e50;
+		color:white;
+	}
+	&:active, &:focus{
+		outline:none;
+	}
+}
