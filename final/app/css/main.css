@@ -54,6 +54,9 @@ table {
 a {
   text-decoration: none; }
 
+button:active, button:focus {
+  outline: none; }
+
 _:-ms-fullscreen, :root .search__input {
   padding: 10px;
   line-height: normal; }

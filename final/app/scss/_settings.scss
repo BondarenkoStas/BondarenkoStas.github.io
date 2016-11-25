@@ -30,6 +30,9 @@ $red: #ff4e50;
 a{
 	text-decoration: none;
 }
+button:active, button:focus{
+  outline:none;
+}
 //for ie11---------------------------------------------------
 _:-ms-fullscreen, :root .search__input{
   padding:10px;
