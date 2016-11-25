@@ -19,12 +19,12 @@
     margin-top:-8px;
     margin-bottom:25px;
     @include mq($from: mobile, $until: tablet) {
-        margin-bottom:3px;
+      margin-bottom:3px;
     }
   }
   &__input {
     @include mq($from: mobile, $until: tablet) {
-        width:92%;
+      width:92%;
     }
     box-sizing:border-box;
     font-size: 14px;
@@ -38,8 +38,8 @@
   }
   &__button{
     @include mq($from: mobile, $until: tablet) {
-        width:92%;
-        margin:0;
+      width:92%;
+      margin:0;
     }
     @extend %ellipse-button;
     margin:10px 0 10px 8px;
@@ -48,7 +48,7 @@
   }
 }
 .grid{
-    @include mq($from: tablet, $until: desktop) {
+  @include mq($from: tablet, $until: desktop) {
     margin: auto;
   }
   &:after {

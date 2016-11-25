@@ -7,6 +7,7 @@
 	&__header{
 		@extend %header;
 		margin-bottom:18px;
+		margin-top:65px;
 		@include mq($from: mobile, $until: tablet){
 			margin-top:25px;
 			margin-bottom: 4px;

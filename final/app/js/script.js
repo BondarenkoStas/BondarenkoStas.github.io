@@ -1,57 +1,50 @@
-$(function(){ 
+window.onload = function(){
 	//---------------------sliders-------------------------------
-	var slider = [];
-	for(var i = 0; i < 3; i++){
-		var owl = $('#slider'+(i+1));
-		owl.owlCarousel({
-			pagination:false,
-			slideSpeed:700,
-     			singleItem:true
+	var sliders = [];
+	for(var i=1;i<=3;i++){
+		sliders[i] = new tns({
+			container: document.querySelector('.sl'+i),
+			items: 1,
+			controlsContainer: document.querySelector('.controls'+i)
 		});
-		slider.push(owl);
-		slider[i].find('.icon-arrow--left').click(function(){
-			$(this).closest('.slider').trigger('owl.prev');
-		})
-		slider[i].find('.icon-arrow--right').click(function(){
-			$(this).closest('.slider').trigger('owl.next');
-		})
 	}
-//		mounting massonry
-		
-//		i use setInterval - bacause images on request 
-//		do not have time to load 
-//		and the plugin is not activated
-	var mas = setInterval(function() {
-		$('.grid').masonry({
-			itemSelector: '.grid-item', 
-			columnWidth: '.grid-sizer',
-			gutter: 10
-		});
-	}, 100);
-		
-	function getPictures (request) {
+
+	function getPictures(request){
+		var r = new XMLHttpRequest();
+		var request;
 		var q = request ? '&q='+encodeURIComponent(request) : '';
-		$.ajax({
-			url: "https://pixabay.com/api/?key=2654122-2e7cfe65e4216a71a55f9c97a&image_type=photo"+q+"&callback=?",
-			dataType: "jsonp",
-			success: function (data) {
-				if (data) {
-					var data = {'data': data};
-					var template = $('#search_template').html();
-					$('.search__results').html(tmpl(template, data));			
-				} else {
-					$('.search__results').html("Error");
-				}					
-			}				
-		});			
+		var url = "https://pixabay.com/api/?key=2654122-2e7cfe65e4216a71a55f9c97a&image_type=photo"+q+"&callback=?";
+		r.onreadystatechange = function(data) {
+			if (this.readyState == 4 && this.status == 200) {
+				var str = this.responseText;
+				var d = str.substring(1,str.length-1);
+				var dat = JSON.parse(d);
+				addImage(dat);
+			}
+		};
+		r.open("POST", url, true);
+		setInterval(r.send(),150);
 	}
-	var someQuery = ['travelling','autumn','green','honey','money','car','mountain','time','summer','spring'];
+
+	function addImage(data){
+		var items = document.getElementsByClassName("grid-item");
+		for(var i = 0; i < items.length; i++){
+			items[i].style.background = "url('"+ data.hits[i].webformatURL +"') no-repeat center center"; 
+			items[i].style.backgroundSize = "cover";
+			items[i].innerHTML = "<div class='grid__text-field'><p class='grid__text'>"+data.hits[i].tags+"</p></div>";
+		}
+	}
+
+	var someQuery = ['travelling','autumn','green','honey','money','car','mountain','time','rose','spring'];
 	getPictures(someQuery[Math.floor(Math.random()*10)]);
 
-	$('.search__button').on('click', function (e) {
-		var request = $('.search__input').val();
-		getPictures(request);
-		
+	var searchButton = document.querySelector('.search__button');
+	searchButton.addEventListener('click',function(e){
+		var searchInput = document.querySelector('.search__input');
+		var query = searchInput.value;
+		if(query!="") {
+			getPictures(query);
+			searchInput.value = "";
+		}
 	});
-			
-});
+};	

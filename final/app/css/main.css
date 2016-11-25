@@ -54,6 +54,10 @@ table {
 a {
   text-decoration: none; }
 
+_:-ms-fullscreen, :root .search__input {
+  padding: 10px;
+  line-height: normal; }
+
 .promo__links button {
   font-family: Montserrat;
   font-size: 16px;
@@ -233,8 +237,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       width: 100%; } }
 
 .slider {
+  position: relative;
   display: inline-block;
-  margin-right: 13px; }
+  margin-right: 13px;
+  overflow: hidden;
+  height: 400px; }
   @media (min-width: 58.75em) {
     .slider {
       width: 300px; } }
@@ -251,7 +258,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 .slide {
   height: 400px;
   width: 100%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   @media (min-width: 20em) and (max-width: 47.99em) {
     .slide {
       height: 240px; } }
@@ -300,7 +308,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   .arrow {
     display: none; } }
 
+.controls {
+  visibility: hidden; }
+
 .arrow {
+  background-color: transparent;
   position: absolute;
   top: calc(50% - 50px);
   cursor: pointer; }
@@ -311,13 +323,17 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 .icon-arrow--right {
   right: 20px; }
 
+div[aria-label="Carousel Pagination"] {
+  display: none; }
+
 .partners__wrapper {
   width: 100%;
   margin: auto;
   text-align: center; }
 
 .partners__header {
-  margin-bottom: 18px; }
+  margin-bottom: 18px;
+  margin-top: 65px; }
   @media (min-width: 20em) and (max-width: 47.99em) {
     .partners__header {
       margin-top: 25px;

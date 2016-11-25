@@ -9,8 +9,11 @@
 		display:block;
 		padding-bottom:10px;
 	}
+	position: relative;
 	display: inline-block;
 	margin-right:13px;
+	overflow:hidden;
+	height:400px;
 	&__header{
 		@extend %header;
 	}
@@ -25,11 +28,12 @@
 	height:400px;
 	width:100%;
 	position: relative;
+	overflow:hidden;
 	&__content {
 		position: absolute;
 		bottom: 0px;
 		padding: 0 10px 15px 19px; 
-  	}
+	}
 	&__step {
 		@include font(Montserrat, 10px,normal);
 		color:white;
@@ -76,7 +80,11 @@
 		display: none;
 	}
 }
+.controls{
+	visibility:hidden;
+}
 .arrow {
+	background-color: transparent;
 	position:absolute;
 	top: calc(50% - 50px);
 	cursor:pointer;
@@ -86,4 +94,8 @@
 }
 .icon-arrow--right{
 	right:20px;
+}
+
+div[aria-label="Carousel Pagination"]{
+	display: none;
 }
