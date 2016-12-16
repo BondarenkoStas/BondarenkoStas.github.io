@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Questions</title>
+	<link rel="stylesheet" href="css/style.min.css">
+  <script src="js/main.min.js"></script>
+</head>
+<body>
+<script type="text/templates" id="result">
+	<main>
+		<h1><%= h1 %></h1>
+		<% var len = radio.length; for(var i=0; i < len; i++) { %>
+			<div class="question__item">
+				<h3><%= radio[i].title %></h3>
+				<% var o_len = radio[i].option.length;
+				for(var j=0; j < o_len; j++) { 
+					var obj = radio[i].option[j]; %>
+					<label><input type="radio" name="<%= radio[i].name %>" value="<%= obj.value %>"><%= obj.text %></label>
+				<% } %>
+			</div>
+		<% } %>
+
+		<% var len = checkbox.length; for(var i=0; i < len; i++) { %>
+			<div class="question__item" name="<%= checkbox[i].name %>" data-max="<%= checkbox[i].answer.length %>">
+				<h3><%= checkbox[i].title %></h3>
+				<% var o_len = checkbox[i].option.length;
+				for(var j=0; j < o_len; j++) { 
+					var obj = checkbox[i].option[j]; %>
+					<label for="<%= obj.name %>"><input type="checkbox" id="<%= obj.name %>" name="<%= obj.name %>" value="<%= obj.value %>"><%= obj.text %></label>
+				<% } %>
+			</div>
+		<% } %>
+
+		<% var len = select.length; for(var i=0; i < len; i++) { 
+			var o_len = select[i].option.length; %>
+			<div class="question__item" data-max="<%= select[i].answer.length %>">
+				<h3><%= select[i].title %></h3>
+				<select class="selectmiddle" multiple size="<%= o_len %>" name="<%= select[i].name %>" id="<%= select[i].name %>">
+				<% for(var j=0; j < o_len; j++) { 
+					var obj = select[i].option[j]; %>
+					<option value="<%= obj.value %>"><%= obj.text %></option>
+				<% } %>	
+				</select>
+			</div>
+		<% } %>
+
+		<button id="submit">Проверить</button>
+
+	</main>
+</script>
+	<div id="modal_form"><span id="modal_close">X</span><div id="for_test"></div></div>
+	<div id="overlay"></div>
+</body>
+</html>
