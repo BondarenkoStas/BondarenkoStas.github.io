@@ -1,0 +1,101 @@
+.slider{
+	@include mq($from: desktop){
+		width:300px;
+	}
+	@include mq($from: tablet, $until: desktop){
+		width:236px;
+	}
+	@include mq($from: mobile, $until: tablet){
+		display:block;
+		padding-bottom:10px;
+	}
+	position: relative;
+	display: inline-block;
+	margin-right:13px;
+	overflow:hidden;
+	height:400px;
+	&__header{
+		@extend %header;
+	}
+	&:last-child{
+		margin-right:0;
+	}
+}
+.slide{	
+	@include mq($from:mobile, $until: tablet){
+		height:240px;
+	}
+	height:400px;
+	width:100%;
+	position: relative;
+	overflow:hidden;
+	&__content {
+		position: absolute;
+		bottom: 0px;
+		padding: 0 10px 15px 19px; 
+	}
+	&__step {
+		@include font(Montserrat, 10px,normal);
+		color:white;
+		letter-spacing: 2px;
+		margin-bottom: 15px;
+		padding: 5px 14px 3px;
+		background: #ff4e50;
+		text-transform: uppercase;
+		border-radius: 10px; 
+	}
+	&__header {
+		@include font(Montserrat,24px,normal);
+		color:white;
+		margin: 18px 0 12px; 
+	}
+	&__text {
+		@include font(Roboto,14px,17px);
+		color: #cccccc;
+		bottom: 0px;
+	}
+	&--1{
+		background: url('../images/slider/slider1--big.jpg');
+	}
+	&--2{
+		background: url('../images/slider/slider2--big.jpg');
+	}
+	&--3{
+		background: url('../images/slider/slider3--big.jpg');
+	}
+	@include mq($from:mobile, $until: tablet){
+		&--1{
+			background: url('../images/slider/slider1--small.jpg');
+		}
+		&--2{
+			background: url('../images/slider/slider2--small.jpg');
+		}
+		&--3{
+			background: url('../images/slider/slider3--small.jpg');
+		}
+	}	
+}
+@include mq($from:mobile, $until: tablet){
+	.arrow{
+		display: none;
+	}
+}
+.controls{
+	visibility:hidden;
+}
+.arrow {
+	background-color: transparent;
+	position:absolute;
+	top: calc(50% - 50px);
+	cursor:pointer;
+}
+.icon-arrow--left{
+	left:20px;
+}
+.icon-arrow--right{
+	right:20px;
+}
+
+div[aria-label="Carousel Pagination"]{
+	display: none;
+}

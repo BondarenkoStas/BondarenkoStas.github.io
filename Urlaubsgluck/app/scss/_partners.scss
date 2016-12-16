@@ -1,0 +1,95 @@
+.partners{ 
+	&__wrapper{ 
+		width: 100%;
+		margin: auto;
+		text-align: center;
+	}
+	&__header{
+		@extend %header;
+		margin-bottom:18px;
+		margin-top:65px;
+		@include mq($from: mobile, $until: tablet){
+			margin-top:25px;
+			margin-bottom: 4px;
+		}	
+	}
+	&-box{
+		@include mq($from: desktop){
+			width:100%;
+		}		
+		@include mq($from: tablet, $until: desktop){
+			width:65%;
+			margin:0 auto;
+		}
+		@include mq($from: mobile, $until: tablet){
+			text-align:center;
+		}
+		overflow:hidden;
+	}
+	&__other{
+		@extend %ellipse-button;
+		margin-top:6px;
+		@include mq($from: mobile, $until: tablet){
+			margin-top:22px;
+			width:88%;
+		}	
+	}
+}
+.partner{
+	@include mq($from: mobile, $until: tablet){
+		float:none;
+		display:inline-block;
+		padding-bottom:12px;
+		width:75%;
+	}	
+	float:left;
+	width:200px;
+	padding:12px 22px 30px;
+	display: block;
+	font-size: 14px;
+	@include mq($from: tablet){
+		&:first-child{
+			padding-left:0;
+		}
+		&:last-child{
+			padding-right:0;
+		}
+	}	
+	&__img{
+		position: relative;
+		display: inline-block;
+		height: 122px;
+		width: 122px;
+	}
+	&__face{
+		height: 122px;
+		width: 122px;
+		border-radius: 100%;
+		&--1{
+			background:url('../images/face1.jpg');
+		}
+		&--2{
+			background:url('../images/face2.jpg');
+		}
+		&--3{
+			background:url('../images/face3.jpg');
+		}
+		&--4{
+			background:url('../images/face4.jpg');
+		}
+	}
+	&__icon {
+		position: absolute;
+		bottom: 0;
+		right: -4px; 
+	}
+	&__header {
+		@include font(Montserrat,14px,normal);
+		margin: 14px 0;
+		color: #333; 
+	}
+	&__text {
+		@include font(Roboto,14px,16px);
+		color: #666; 
+	}
+}

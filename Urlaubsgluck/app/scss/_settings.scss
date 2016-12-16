@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+  url('../fonts/montserrat-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+  url('../fonts/roboto-light-webfont.woff') format('woff');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+
+$width_desktop:940px;
+$width_tablet:768px;
+$width_promo_tablet:670px;
+$width_footer_tablet:690px;
+$width_wrapper_tablet:748px;
+$width_mobile:320px;
+$width_wrapper_mobile:300px;
+
+$gray-light: #cccccc;
+$gray: #666;
+$dark: #333;
+$red: #ff4e50;
+
+a{
+	text-decoration: none;
+}
+button:active, button:focus{
+  outline:none;
+}
+//for ie11---------------------------------------------------
+_:-ms-fullscreen, :root .search__input{
+  padding:10px;
+  line-height:normal;
+}
+
