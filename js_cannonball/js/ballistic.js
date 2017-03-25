@@ -32,7 +32,7 @@ var bulletsInfo = {
 	},
 	artillery: {
 		mass:200,
-		velocity:{x:40,y:-30},
+		velocity:{x:12,y:-10},
 		acceleration:{x:0,y:20},
 		damping:0.99,
 		force:{x:0,y:0},
