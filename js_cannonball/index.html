@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Ballistics</title>
+        <script src="js/core.js"></script>
+        <script src="js/particle.js"></script>
+        <script src="js/ballistic.js"></script>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+	    	<div class="menu">
+	    		<div class="menu_item bulletTypeWrape"><b>Type of projectile</b><Br>
+			 	<label name="bulletType"><input type="radio" checked class="bulletType" name="bulletType" value="pistol"> Pistol<Br></label>
+			   	<label name="bulletType"><input type="radio" class="bulletType" name="bulletType" value="artillery"> Artillery<Br></label>
+			   	<label name="bulletType"><input type="radio" class="bulletType" name="bulletType" value="fireball"> Fireball<Br></label>
+			   	<label name="bulletType"><input type="radio" class="bulletType" name="bulletType" value="laser"> Laser<Br></label>
+			</div>
+			<div class="menu_item params">
+				<p><b>Options</b></p>
+				<div class="params_item">
+					<p><input type="number" id="vX" class="option"> VelocityX</label></p>
+					<p><input type="number" id="aX" class="option"> AccelerationX</label></p>
+					<p><input type="number" id="damp" class="option"> Damping</label></p>	
+				</div>
+				<div class="params_item">
+					<p><input type="number" id="vY" class="option"> VelocityY</label></p>
+					<p><input type="number" id="aY" class="option"> AccelerationY</label></p>
+				</div>				
+			</div>
+	    	</div>
+        <div class="container">
+            <canvas id="canvas" width="640" height="480"></canvas>
+        </div>
+
+    </body>
+</html>
