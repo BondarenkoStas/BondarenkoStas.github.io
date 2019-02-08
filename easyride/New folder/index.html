@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>test</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="http://onlinetonegenerator.com/js/DTMFgenerator.js"></script>
+    </head>
+    <body>
+      <img src="logo.png" style="float:left;" />
+        <div class="phone" style="float:left;">
+            <img class="img" src="nokia.jpg" alt="">
+            <div class="screen">
+                <div class="screenNumber hidden" id="screen"></div>
+            </div>
+            <div class="buttons">
+                <div class="btn btnC"></div>
+                <div class="btn btnMenu"></div>
+                <div class="btn btnNext"></div>
+                <div class="btn btnPrev"></div>
+
+                <div class="btn btnNum b1 numLine1 numCol1" data-symbols=".,-!?'1" data-num="1" onmousedown="dialTone(697.0, 1209.0)" onmouseup="stop()"></div>
+                <div class="btn btnNum b2 numLine1 numCol2" data-symbols="abcABC2" data-num="2" onmousedown="dialTone(697.0, 1336.0)" onmouseup="stop()"></div>
+                <div class="btn btnNum b3 numLine1 numCol3" data-symbols="defDEF3" data-num="3" onmousedown="dialTone(697.0, 1477.0)" onmouseup="stop()"></div>
+
+                <div class="btn btnNum b4 numLine2 numCol1"  data-symbols="ghiGHI4" data-num="4" onmousedown="dialTone(770.0, 1209.0)" onmouseup="stop()"></div>
+                <div class="btn btnNum b5 numLine2 numCol2" data-symbols="jklJK5" data-num="5" onmousedown="dialTone(770.0, 1336.0)" onmouseup="stop()"></div>
+                <div class="btn btnNum b6 numLine2 numCol3" data-symbols="mnoMNO6" data-num="6" onmousedown="dialTone(770.0, 1477.0)" onmouseup="stop()"></div>
+
+                <div class="btn btnNum b7 numLine3 numCol1" data-symbols="pqrsPQRS7" data-num="7" onmousedown="dialTone(852.0, 1209.0)" onmouseup="stop()"></div>
+                <div class="btn btnNum b8 numLine3 numCol2" data-symbols="tuvTUV8" data-num="8" onmousedown="dialTone(852.0, 1336.0)" onmouseup="stop()"></div>
+                <div class="btn btnNum b9 numLine3 numCol3" data-symbols="wxyzWXYZ9" data-num="9" onmousedown="dialTone(852.0, 1477.0)" onmouseup="stop()"></div>
+
+                <div class="btn btnNum b* numLine4 numCol1" data-symbols="*+" data-num="*" onmousedown="dialTone(941.0, 1209.0)" onmouseup="stop()"></div>
+                <div class="btn btnNum b0 numLine4 numCol2" data-symbols=" 0" data-num="0" onmousedown="dialTone(941.0, 1336.0)" onmouseup="stop()"></div>
+                <div class="btn btnNum b# numLine4 numCol3" data-symbols="#" data-num="#" onmousedown="dialTone(941.0, 1477.0)" onmouseup="stop()"></div>
+            </div>
+        </div>
+        <script src="jquery.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

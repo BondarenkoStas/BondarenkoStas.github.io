@@ -1,0 +1,32 @@
+.motto {
+  font-size: 2rem !important;
+}
+.center{
+  text-align: center !important;
+}
+.center > a {
+  position: relative;
+}
+
+.box-left{
+  text-align: left;
+}
+
+.ulactions{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 1.3rem;
+  margin-top: 20px;
+}
+
+.nokia {
+  height: 80vh !important;
+}
+
+#about{
+  padding: 3rem 0 !important;
+}
+
+.btn{
+  position: relative !important;
+}
