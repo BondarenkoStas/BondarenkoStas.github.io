@@ -1,5 +1,6 @@
 .motto {
   font-size: 2rem !important;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .center{
   text-align: center !important;
@@ -23,10 +24,14 @@
   height: 80vh !important;
 }
 
-#about{
-  padding: 3rem 0 !important;
+section {
+  padding: 4rem 0 !important;
 }
 
-.btn{
+.posrev{
   position: relative !important;
+}
+
+.diagram {
+  width: 100vh !important;
 }
