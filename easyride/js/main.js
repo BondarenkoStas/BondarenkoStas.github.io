@@ -11,20 +11,26 @@ $('.btnC').on('click',function() {
     $('.screenNumber').text(str.substring(0, str.length - 1));
 });
 
-$('.btnNum').on('click',function() {
+var timeButtonPressed;
+var lastPressedDigit;
+
+$('.btnNum').on('mousedown', function() {
     if (mode == 1) {
         var num = $(this).data('num');
         $('.screenNumber').text($('.screenNumber').text() + num);
     } else {
+        timeButtonPressed = new Date().valueOf();
+        lastPressedDigit = $(this).data('num');
+
         currentNumBtn = $(this).data('num');
         currentClickTimestamp = new Date().valueOf();
-        if (currentNumBtn == numBtn && currentClickTimestamp - clickTimestamp < 500 ) {
+        if (currentNumBtn == numBtn && currentClickTimestamp - clickTimestamp < 800 ) {
             numOfClick += 1;
         } else {
             numOfClick = 1;
         }
-        var symbols = $(this).data('symbols');
-        if (currentNumBtn == numBtn && (currentClickTimestamp - clickTimestamp < 500 )) {
+        symbols = $(this).data('symbols');
+        if (currentNumBtn == numBtn && (currentClickTimestamp - clickTimestamp < 800 )) {
             symbolIndex = numOfClick % symbols.length ? numOfClick % symbols.length - 1 : symbols.length - 1;
             var str = $('.screenNumber').text();
             $('.screenNumber').text(str.substring(0, str.length - 1) + symbols[symbolIndex]);
@@ -36,6 +42,27 @@ $('.btnNum').on('click',function() {
         clickTimestamp = currentClickTimestamp;
     }
 });
+$('.btnNum').on('mouseup', function(){
+    if (mode != 1) {
+        if (new Date().valueOf() - timeButtonPressed > 800){
+            var str = $('.screenNumber').text();
+            $('.screenNumber').text(str.substring(0, str.length - 1) + lastPressedDigit); 
+        } 
+    }
+});
+
+var start = 0;
+$(".btnNum").mousedown(function(e) {
+    if(e.keyCode == 37) {
+        start = new Date().getTime();
+    } else if(e.keyCode == 39) {
+        var elapsed = new Date().getTime() - start;
+        alert("elapsed time in milliseconds is: " + elapsed);
+        // start again
+        start = 0;
+    }
+});
+
 $('.btnMenu').on('click',function() {
     // var str = $('.screenNumber').text();
     // $('.screenNumber').text(str.substring(0, str.length - 1));
@@ -60,15 +87,15 @@ $('.btnMenu').on('click',function() {
     }
     if(submitted == 0 && $('.screenNumber').text() == "*123#"){
         mode = 1;
-        $('.screenNumber').text("1- Book a ride \n 2- Inquiry / complaint \n 3- Add payment method \n\n");
+        $('.screenNumber').html("1 - Book a ride <br> 2 - Inquiry/complaint <br> 3 - Add payment method <br>").css( "text-align", "left" );
         submitted++;
     }
     else if(submitted == 1 && selection == 1){
-        $('.screenNumber').text("From ? \n");
+        $('.screenNumber').html("Pick up: <br>");
         submitted++;
     }
     else if(submitted == 2 && selection == 1){
-        $('.screenNumber').text("To ? \n");
+        $('.screenNumber').html("To: <br>");
         submitted++;
     }
     else if(submitted == 3 && selection == 1){
@@ -143,7 +170,7 @@ $('.btn').on('click',function() {
     }
     else{
         console.log("heree 2")
-        $(".screenNumber").css({'font-size':15});
+        $(".screenNumber").css({'font-size':14});
     }
     if ($('.screenNumber').text()) {
         $('.screenNumber').removeClass('hidden');
