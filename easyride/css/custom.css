@@ -33,5 +33,9 @@ section {
 }
 
 .diagram {
-  width: 100vh !important;
+  width: 140vh !important;
+}
+
+#services {
+  height: 100vh !important;
 }
